@@ -9,6 +9,7 @@
 .flex {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .justify-even {
@@ -18,7 +19,25 @@
 /* ====== Id Styles ====== */
 
 #header {
-    height: 70px;
+    height: 80px;
     background-color: rgba(0, 0, 0, 0.736);
     color: white;
+}
+
+#header > h1 {
+    font-size: 300%;
+}
+
+#nav-bar {
+    width: 700px;
+}
+
+#nav-bar > a {
+    font-size: 175%;
+}
+
+#character-card {
+    background-color: red;
+    width: 700px;
+    margin-top: 40px;
 }
