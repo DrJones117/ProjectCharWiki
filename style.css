@@ -16,7 +16,15 @@
     justify-content: space-evenly;
 }
 
-/* ====== Id Styles ====== */
+.justify-between {
+    justify-content: space-between;
+}
+
+.border {
+    border: solid black;
+}
+
+/* ====== Page Header Styles ====== */
 
 #header {
     height: 80px;
@@ -36,8 +44,48 @@
     font-size: 175%;
 }
 
-#character-card {
-    background-color: red;
+/* ====== Character Card Styles ====== */
+
+.char-card {
     width: 700px;
-    margin-top: 40px;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: rgb(207, 207, 207);
+    border-radius: 10px;
+}
+
+.char-header {
+    height: 130px;
+    width: inherit;
+}
+
+.char-body > p {
+    background-color: aqua;
+    height: inherit;
+    width: 600px;
+    margin-left: 50px;
+}
+
+.char-info {
+    background-color: green;
+    width: 700px;
+    height: 40px;
+    color: white;
+}
+
+.char-history {
+    height: inherit;
+    width: 400px;
+}
+
+/* ====== Character Header ====== */
+
+.main-img {
+    height: 130px;
+    width: 130px;
+}
+
+.img-more {
+    height: 100px;
+    width: 100px;
 }
