@@ -1,6 +1,24 @@
+/* ====== Reused Styles ====== */
+
 * {
     border: 0px;
     margin: 0px;
     padding: 0px;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.justify-even {
+    justify-content: space-evenly;
+}
+
+/* ====== Id Styles ====== */
+
+#header {
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.736);
+    color: white;
+}
