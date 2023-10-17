@@ -22,6 +22,7 @@
 
 .border {
     border: solid black;
+    border-radius: 10px;
 }
 
 /* ====== Page Header Styles ====== */
@@ -40,8 +41,13 @@
     width: 700px;
 }
 
-#nav-bar > a {
+#nav-bar > button {
+    border-radius: 10px;
+    height: 50px;
+    width: 150px;
     font-size: 175%;
+    background-color: inherit;
+    color: white;
 }
 
 /* ====== Character Card Styles ====== */
@@ -51,26 +57,24 @@
     margin-top: 50px;
     padding: 10px;
     background-color: rgb(207, 207, 207);
-    border-radius: 10px;
 }
 
 .char-header {
     height: 130px;
-    width: inherit;
+    width: 600px;
 }
 
 .char-body > p {
-    background-color: aqua;
+    background-color: white;
     height: inherit;
     width: 600px;
-    margin-left: 50px;
+    margin-left: 30px;
+    padding: 20px;
 }
 
 .char-info {
-    background-color: green;
     width: 700px;
     height: 40px;
-    color: white;
 }
 
 .char-history {
@@ -87,5 +91,5 @@
 
 .img-more {
     height: 100px;
-    width: 100px;
+    background-color: white;
 }
