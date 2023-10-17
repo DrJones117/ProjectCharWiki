@@ -8,26 +8,29 @@
 </head>
 <body>
     <!-- Page Header -->
-        <div id="header" class="flex justify-even">
-            <h1>Nerd-Wiki</h1>
-            <div id="nav-bar" class="flex justify-even">
-                <button onmouseenter="buttonChange(this)" onmouseleave=" buttonRevert(this)">Home</button>
-                <button onmouseenter="buttonChange(this)" onmouseleave=" buttonRevert(this)">Favorites</button>
-                <button onmouseenter="buttonChange(this)" onmouseleave=" buttonRevert(this)">Contribute</button>
-                <button onmouseenter="buttonChange(this)" onmouseleave=" buttonRevert(this)">Contact</button>
-            </div>
+    <div id="header" class="flex justify-even">
+        <h1>Nerd-Wiki</h1>
+        <div id="nav-bar" class="flex justify-even">
+            <button onmouseenter="buttonChange(this)" onmouseleave=" buttonRevert(this)">Home</button>
+            <button onmouseenter="buttonChange(this)" onmouseleave=" buttonRevert(this)">Favorites</button>
+            <button onmouseenter="buttonChange(this)" onmouseleave=" buttonRevert(this)">Contribute</button>
+            <button onmouseenter="buttonChange(this)" onmouseleave=" buttonRevert(this)">Contact</button>
         </div>
+    </div>
 
-        <!-- Character Cards -->
-        <div class="flex">
-            <div class="char-card border">
+    <!-- Character Cards -->
+    <div class="flex">
+        <div id="char-slide" class="flex">
+            <div id="char-1" class="flex">
+                <img class="left arrow" src="images/left_arr.jpeg" alt="left-arrow">
+                <div class="char-card border">
                     <div class="char-header flex justify-between">
                         <img class="main-img" src="images/yu_main.jpg" alt="mainImg">
                         <img class="img-more" src="images/yu_p4.png" alt="sideImg">
                         <img class="img-more" src="images/yu_p4a.png" alt="sideImg">
                         <img class="img-more" src="images/yu_p4d.png" alt="sideImg"> 
                     </div>
-
+                    
                 <div class="char-body">
                     <div class="char-info">
                         <div id="name" class="flex justify-between">
@@ -41,10 +44,42 @@
                     <p class="border">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor qui consequatur, 
                         consectetur rerum corrupti, et tenetur atque accusamus quo beatae soluta voluptate 
                         voluptas laudantium. Dolorum deleniti provident error reprehenderit repellendus.</p>
-                    <a>report content error</a>
+                        <a>report content error</a>
+                    </div>
                 </div>
+                <img class="right arrow" src="images/right_arr.jpg" alt="right-arrow" onclick="transition()">
+            </div>
+
+            <div id="char-2" class="flex">
+                <img class="arrow" src="images/left_arr.jpeg" alt="left-arrow">
+                <div class="char-card border">
+                    <div class="char-header flex justify-between">
+                        <img class="main-img" src="images/yu_main.jpg" alt="mainImg">
+                        <img class="img-more" src="images/yu_p4.png" alt="sideImg">
+                        <img class="img-more" src="images/yu_p4a.png" alt="sideImg">
+                        <img class="img-more" src="images/yu_p4d.png" alt="sideImg"> 
+                    </div>
+                
+                    <div class="char-body">
+                        <div class="char-info">
+                            <div id="name" class="flex justify-between">
+                                <h2>Yu Narukami</h2>
+                                <div class="char-history flex justify-even">
+                                    <p>First appearance: Persona 4: July 10, 2008 |</p>
+                                    <p>State: Not dead</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="border">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor qui consequatur, 
+                            consectetur rerum corrupti, et tenetur atque accusamus quo beatae soluta voluptate 
+                            voluptas laudantium. Dolorum deleniti provident error reprehenderit repellendus.  Success!</p>
+                        <a>report content error</a>
+                    </div>
+                </div>
+                <img class="arrow" src="images/right_arr.jpg" alt="right-arrow">
             </div>
         </div>
-        <script src="script.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

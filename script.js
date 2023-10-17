@@ -1,4 +1,3 @@
-
 function buttonChange(element) {
     element.style.backgroundColor = "white";
     element.style.color = "black";
