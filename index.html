@@ -21,16 +21,16 @@
 
     <!-- Character Cards -->
     <div class="flex">
-        <div id="carouselExampleControls" class="carousel slide">
+        <div id="carouselExampleControls" class="carousel slide" data-interval="0">
             <div class="carousel-inner">
             <div class="carousel-item active">
                 <div id="char-1" class="slide-con flex">
                     <div class="char-card border-black">
                             <div class="char-header flex justify-between">
-                                <img class="main-img" src="images/yu_main.jpg" alt="mainImg">
-                                <img class="img-more" src="images/yu_p4.png" alt="sideImg">
-                                <img class="img-more" src="images/yu_p4a.png" alt="sideImg">
-                                <img class="img-more" src="images/yu_p4d.png" alt="sideImg"> 
+                                <img class="main-img" src="images/yu_main.jpg" alt="mainImg" onmouseenter="exImg(this)" onmouseleave="decrMain(this)">
+                                <img class="sideImg" src="images/yu_p4.png" alt="sideImg" onmouseenter="exImg(this)" onmouseleave="decrSide(this)">
+                                <img class="sideImg" src="images/yu_p4a.png" alt="sideImg" onmouseenter="exImg(this)" onmouseleave="decrSide(this)">
+                                <img class="sideImg" src="images/yu_p4d.png" alt="sideImg" onmouseenter="exImg(this)" onmouseleave="decrSide(this)"> 
                             </div>
                             
                         <div class="char-body">
@@ -55,10 +55,10 @@
                 <div id="char-2" class="slide-con flex">
                     <div class="char-card border-black">
                             <div class="char-header flex justify-between">
-                                <img class="main-img" src="images/yu_main.jpg" alt="mainImg">
-                                <img class="img-more" src="images/yu_p4.png" alt="sideImg">
-                                <img class="img-more" src="images/yu_p4a.png" alt="sideImg">
-                                <img class="img-more" src="images/yu_p4d.png" alt="sideImg"> 
+                                <img class="main-img" src="images/yu_main.jpg" alt="mainImg" onmouseenter="exImg(this)" onmouseleave="decrMain(this)">
+                                <img class="sideImg" src="images/yu_p4.png" alt="sideImg" onmouseenter="exImg(this)" onmouseleave="decrSide(this)">
+                                <img class="sideImg" src="images/yu_p4a.png" alt="sideImg" onmouseenter="exImg(this)" onmouseleave="decrSide(this)">
+                                <img class="sideImg" src="images/yu_p4d.png" alt="sideImg" onmouseenter="exImg(this)" onmouseleave="decrSide(this)"> 
                             </div>
                             
                         <div class="char-body">
@@ -84,10 +84,10 @@
                 <div id="char-3" class="slide-con flex">
                     <div class="char-card border-black">
                             <div class="char-header flex justify-between">
-                                <img class="main-img" src="images/yu_main.jpg" alt="mainImg">
-                                <img class="img-more" src="images/yu_p4.png" alt="sideImg">
-                                <img class="img-more" src="images/yu_p4a.png" alt="sideImg">
-                                <img class="img-more" src="images/yu_p4d.png" alt="sideImg"> 
+                                <img class="main-img" src="images/yu_main.jpg" alt="mainImg" onmouseenter="exImg(this)" onmouseleave="decrMain(this)">
+                                <img class="sideImg" src="images/yu_p4.png" alt="sideImg" onmouseenter="exImg(this)" onmouseleave="decrSide(this)">
+                                <img class="sideImg" src="images/yu_p4a.png" alt="sideImg" onmouseenter="exImg(this)" onmouseleave="decrSide(this)">
+                                <img class="sideImg" src="images/yu_p4d.png" alt="sideImg" onmouseenter="exImg(this)" onmouseleave="decrSide(this)"> 
                             </div>
                             
                         <div class="char-body">
@@ -118,32 +118,6 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        <!-- <div id="char-1" class="slide-con flex">
-            <div class="char-card border-black">
-                    <div class="char-header flex justify-between">
-                        <img class="main-img" src="images/yu_main.jpg" alt="mainImg">
-                        <img class="img-more" src="images/yu_p4.png" alt="sideImg">
-                        <img class="img-more" src="images/yu_p4a.png" alt="sideImg">
-                        <img class="img-more" src="images/yu_p4d.png" alt="sideImg"> 
-                    </div>
-                    
-                <div class="char-body">
-                    <div class="char-info">
-                        <div class="name flex justify-start">
-                            <h2>Yu Narukami</h2>
-                            <div class="char-history flex justify-even">
-                                <p>First appearance: Persona 4: July 10, 2008 |</p>
-                                <p>State: Not dead</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="border-black">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor qui consequatur, 
-                        consectetur rerum corrupti, et tenetur atque accusamus quo beatae soluta voluptate 
-                        voluptas laudantium. Dolorum deleniti provident error reprehenderit repellendus.</p>
-                    <a>report content error</a>
-                </div>
-            </div>
-        </div> -->
     </div>
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
