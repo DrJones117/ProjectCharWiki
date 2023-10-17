@@ -7,3 +7,4 @@ function buttonRevert(element) {
     element.style.backgroundColor = "inherit";
     element.style.color = "white";
 }
+
