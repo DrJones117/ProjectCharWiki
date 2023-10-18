@@ -33,6 +33,19 @@
     color: black;
 }
 
+/* ====== Quote Card Styles ====== */
+
+.quote {
+    transition: 500ms;
+    position: absolute;
+    opacity: 0;
+    width: 280px;
+    padding: 10px;
+    margin-left: 150px;
+    background-color: white;
+}
+
+
 /* ====== Page Header Styles ====== */
 
 #header {
@@ -61,7 +74,9 @@
 /* ====== Character Card Styles ====== */
 
 .slide-con {
-    width: 1000px;
+    height: 1000px;
+    width: 97%;
+    align-items: baseline;
 }
 
 .char-card {
@@ -109,12 +124,17 @@
 /* ====== Character Header ====== */
 
 .main-img {
+    transition: 500ms;
     height: 130px;
     width: 130px;
+    border-radius: 10px;
+    position: static;
 }
 
 .sideImg {
+    transition: 500ms;
     height: 100px;
     width: 100px;
+    border-radius: 10px;
     background-color: white;
 }
