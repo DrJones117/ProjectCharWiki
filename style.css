@@ -99,7 +99,7 @@
     width: 600px;
 }
 
-.char-body > p {
+.char-body > .description {
     background-color: white;
     height: inherit;
     width: 600px;

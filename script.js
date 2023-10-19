@@ -43,11 +43,13 @@ function decrSide(element) {
 function quoteCardEnter1() {
     var qCard = document.getElementById("quoteCard1");
     qCard.style.opacity = "1";
+    qCard.style.visibility = "visible";
 }
 
 function quoteCardLeave1() {
     var qCard = document.getElementById("quoteCard1");
     qCard.style.opacity = "0";
+    qCard.style.visibility = "hidden";
 }
 
 // quote 2
@@ -55,11 +57,13 @@ function quoteCardLeave1() {
 function quoteCardEnter2() {
     var qCard = document.getElementById("quoteCard2");
     qCard.style.opacity = "1";
+    qCard.style.visibility = "visible";
 }
 
 function quoteCardLeave2() {
     var qCard = document.getElementById("quoteCard2");
     qCard.style.opacity = "0";
+    qCard.style.visibility = "hidden";
 }
 
 // quote 3
@@ -67,11 +71,13 @@ function quoteCardLeave2() {
 function quoteCardEnter3() {
     var qCard = document.getElementById("quoteCard3");
     qCard.style.opacity = "1";
+    qCard.style.visibility = "visible";
 }
 
 function quoteCardLeave3() {
     var qCard = document.getElementById("quoteCard3");
     qCard.style.opacity = "0";
+    qCard.style.visibility = "hidden";
 }
 
 
