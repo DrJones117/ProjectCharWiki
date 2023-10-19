@@ -21,10 +21,14 @@
 
     <!-- Character Cards -->
     <div class="container">
+
+        <!-- Main Carousel -->
         <div id="carouselExampleControls" class="carousel slide" data-interval="0">
             <div class="carousel-inner">
+
+            <!-- Carousel Item 1 -->
             <div class="carousel-item active">
-                <div class="slide-con flex">
+                <div class="char-con flex">
                     <div class="char-card border-black">
                             <div class="char-header flex justify-between">
                                 <img class="main-img" src="images/yu_main.jpg" alt="mainImg" onmouseenter="exImg(this)" onmouseleave="decrMain(this)">
@@ -51,8 +55,39 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Define the slideshow container -->
+                <div id="slideBody">
+                    <div id="slideshow">
+                        <div class="slide-wrapper">
+                            
+                            <!-- Define each of the slides
+                                and write the content -->
+                                
+                            <div class="nerdSlide">
+                                <h1 class="slide-number">
+                                    
+                                </h1> 
+                            </div>
+                            <div class="nerdSlide">
+                                <img class="img" src="img_2.jpeg">
+                            </div>
+                            <div class="nerdSlide">
+                                <h1 class="slide-number">
+                                    
+                                </h1> 
+                            </div>
+                            <div class="nerdSlide">
+                                <h1 class="slide-number">
+                                    
+                                </h1> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
+            <!-- Carousel Item 2 -->
             <div class="carousel-item">
                 <div id="char-2" class="slide-con flex">
                     <div class="char-card border-black">
@@ -84,6 +119,7 @@
                 </div>
             </div>
 
+            <!-- Carousel Item 3 -->
             <div class="carousel-item">
                 <div id="char-3" class="slide-con flex">
                     <div class="char-card border-black">
@@ -117,12 +153,10 @@
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span><img src="images/left_arr.jpeg" class="carousel-control-prev-icon arrow" aria-hidden="true"></img></span>
-                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
                 <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                 <span><img src="images/right_arr.jpg" class="carousel-control-next-icon arrow" aria-hidden="true"></img></span>
-                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
                 <span class="sr-only">Next</span>
             </a>
         </div>

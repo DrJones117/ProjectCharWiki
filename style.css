@@ -33,6 +33,10 @@
     color: black;
 }
 
+.absolute {
+    position: absolute;
+}
+
 /* ====== Quote Card Styles ====== */
 
 .quote {
@@ -73,8 +77,8 @@
 
 /* ====== Character Card Styles ====== */
 
-.slide-con {
-    height: 1000px;
+.char-con {
+    height: 500px;
     width: 97%;
     align-items: baseline;
 }
@@ -137,4 +141,83 @@
     width: 100px;
     border-radius: 10px;
     background-color: white;
+}
+
+/* ====== Carousel Styles ====== */
+
+#slideBody {
+    font-family: Helvetica, sans-serif;
+    padding: 5%;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 50;
+}
+
+  /* Styling the area of the slides */
+#slideshow {
+    overflow: hidden;
+    height: 300px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+/* Style each of the sides 
+  with a fixed width and height */
+.nerdSlide {
+    float: left;
+    height: 300px;
+    width: 500px;
+}
+
+  /* Add animation to the slides */
+.slide-wrapper {
+    
+/* Calculate the total width on the
+    basis of number of slides */
+    width: calc(500px * 4);
+
+/* Specify the animation with the
+    duration and speed */
+    animation: slide 15s ease infinite;
+}
+
+/* Set the background color
+  of each of the slides */
+.nerdSlide:nth-child(1) {
+    background: green;
+}
+
+.nerdSlide:nth-child(2) {
+    background: pink;
+}
+
+.nerdSlide:nth-child(3) {
+    background: red;
+}
+
+.nerdSlide:nth-child(4) {
+    background: yellow;
+}
+
+/* Define the animation 
+  for the slideshow */
+@keyframes slide {
+    
+/* Calculate the margin-left for 
+    each of the slides */
+20% {
+    margin-left: 0px;
+}
+
+    40% {
+      margin-left: calc(-500px * 1);
+    }
+
+    60% {
+      margin-left: calc(-500px * 2);
+    }
+
+    80% {
+      margin-left: calc(-500px * 3);
+    }
 }
