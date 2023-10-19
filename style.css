@@ -29,8 +29,7 @@
     border-radius: 10px;
 }
 
-.border-gray {
-    border: solid gray;
+.border-none{
     border-radius: 10px;
 }
 
@@ -50,7 +49,7 @@
     opacity: 0;
     width: 280px;
     padding: 10px;
-    margin: 150px 0px 0px 150px;
+    margin: 9% 0% 0% 12%;
     background-color: white;
 }
 
