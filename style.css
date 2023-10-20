@@ -49,7 +49,7 @@
     opacity: 0;
     width: 280px;
     padding: 10px;
-    margin: 9% 0% 0% 12%;
+    margin: 175px 0px 0px 150px;
     background-color: white;
 }
 
@@ -129,6 +129,11 @@
     width: 75px;
 }
 
+.report {
+    color: blue;
+    text-decoration: underline;
+}
+
 /* ====== Character Header ====== */
 
 .main-img {
@@ -156,13 +161,13 @@
 
 /* ====== Slideshow Styles ====== */
 
-#slideBody {
+.slideBody {
     padding: 1%;
     text-align: center;
     font-size: 50;
 }
 
-#slideshow {
+.slideshow {
     overflow: hidden;
     height: 300px;
     width: 700px;

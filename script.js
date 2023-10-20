@@ -81,3 +81,9 @@ function quoteCardLeave3() {
 }
 
 
+// report
+
+function report() {
+    alert("Loading report form.")
+}
+
