@@ -1,0 +1,15 @@
+.bg-image-log {
+    background-image: url("https://images.creativemarket.com/0.1.0/ps/1656196/1360/906/m1/fpnw/wm1/ees6hqqmdfyfpd2mm0hkqwvhrffoozof6ptm7b4ncvatl3vzwwsercpqc3jnoa3c-.jpg?1473853235&s=740980438cd956b3c2024cff83dddf5d");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg-image-home {
+    background-image: url("https://images4.alphacoders.com/108/thumb-1920-1082885.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
