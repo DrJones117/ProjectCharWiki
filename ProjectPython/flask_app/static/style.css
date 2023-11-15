@@ -13,3 +13,19 @@
     background-attachment: fixed;
     background-size: cover;
 }
+
+.bg-image-dashboard {
+    background-image: url("https://img0.etsystatic.com/005/0/6438263/il_fullxfull.406367924_kidr.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg-image-create {
+    background-image: url("https://www.printablee.com/postpic/2010/08/free-printable-vintage-recipe-cards-4x6_358641.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

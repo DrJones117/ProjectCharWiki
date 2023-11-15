@@ -14,19 +14,21 @@
     <div class="bg-secondary-subtle p-4 d-flex justify-content-between">
         <h1>Virtual Recipe box</h1>
         <div class="d-flex">
-            <p class="fs-5 me-3">{{ user.first_name }} {{ user.last_name }}</p>
+            <p class="fs-5 me-3 mt-1">{{ user.first_name }} {{ user.last_name }}</p>
             <a href="/home_page/logout" class="btn btn-danger h-75">Logout</a>
         </div>
     </div>
 
     <!-- Subheader -->
     <div class="p-2 bg-secondary mb-5">
-        <a href="/" class="btn btn-secondary btn-sm">My Recipes</a>
-        <a href="/" class="btn btn-secondary btn-sm">Browse</a>
+        <a href="/dashboard" class="btn btn-secondary btn-sm">My Recipes</a>
+        <a href="/browse" class="btn btn-secondary btn-sm">Browse</a>
     </div>
 
+    <!-- body -->
     <div class="d-flex justify-content-center">
         <div class="bg-white p-4 text-wrap h-75 w-50 opacity-75 rounded">
+            <h1>Welcome, {{ user.first_name }}!</h1>
             <p>
                 welcome
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. At, accusantium, debitis quisquam totam placeat sapiente officia iusto dolor nesciunt in accusamus voluptatum explicabo, facere aut error. Sed doloremque excepturi esse.

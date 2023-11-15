@@ -4,15 +4,17 @@ from flask_app.models.user import User
 from flask_app.models.recipe import Recipe
 
 
-# Renders the Login page
+# Default route
 @app.route('/')
 def index():
     return redirect('/login')
 
+# Renders the Login page
 @app.route('/login')
 def login():
     return render_template('login.html')
 
+# Renders the register page
 @app.route('/register')
 def register():
     return render_template('register.html')
@@ -58,9 +60,22 @@ def home_page():
 
 
 
+# ===== Recipe Routes ======
 
+@app.route('/dashboard')
+def dashboard():
+    if not 'id' in session:
+        return redirect('/')
+    user = User.get_one(session['id'])
+    recipes = Recipe.display_recipes()
+    return render_template("dashboard.html", user = user, recipes = recipes)
 
-# ===== Sasqutch Routes ======
+@app.route('/dashboard/add')
+def add_recipe():
+    if not 'id' in session:
+        return redirect('/')
+    user = User.get_one(session['id'])
+    return render_template("create_recipe.html", user = user)
 
 # # Add sasquatch route
 # @app.route('/sasquatches')
