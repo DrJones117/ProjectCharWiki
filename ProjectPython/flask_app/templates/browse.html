@@ -7,12 +7,12 @@
     rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
     crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
-    <title>Home Page</title>
+    <title>Browse Page</title>
 </head>
-<body class="bg-image-dashboard">
+<body class="bg-image-browse">
     <!-- Header -->
     <div class="p-3 d-flex justify-content-between bg-secondary-subtle">
-        <h1>Your recipes</h1>
+        <h1>Browse all recipes</h1>
         <div class="d-flex">
             <p class="fs-5 me-3 mt-1">{{ user.first_name }} {{ user.last_name }}</p>
             <a href="/home_page/logout" class="btn btn-danger h-75">Logout</a>
@@ -24,7 +24,7 @@
         <a href="/home_page" class="btn btn-secondary btn-sm">Home</a>
         <a href="/dashboard" class="btn btn-secondary btn-sm">My Recipes</a>
         <a href="/dashboard/add" class="btn btn-secondary btn-sm">Create Recipe</a>
-        <a href="/browse" class="btn btn-secondary btn-sm">Browse</a>
+        <a href="/recipes/browse" class="btn btn-secondary btn-sm">Browse</a>
     </div>
 
     <!-- Body -->
@@ -38,19 +38,17 @@
                 </thead>
                 <tbody class="fs-5">
                     {% for recipe in recipes %}
-                        {% if recipe.user_id == session['id'] %}
-                            <tr>
-                                <td>
-                                    <a class="text-black" href="/recipes/{{ recipe.id }}/show">{{ recipe.name }}</a>
-                                </td>
-                                <td>{{ recipe.time }}</td>
-                                {% if recipe.user_id == session['id'] %}
-                                    <td>Me</td>
-                                {% else %}
-                                    <td>{{ user.first_name}} {{user.last_name  }}</td>
-                                {% endif %}
-                            </tr>
-                        {% endif %}
+                        <tr>
+                            <td>
+                                <a class="text-black" href="/recipes/{{ recipe.id }}/show">{{ recipe.name }}</a>
+                            </td>
+                            <td>{{ recipe.time }}</td>
+                            {% if recipe.user_id == session['id'] %}
+                                <td>Me</td>
+                            {% else %}
+                                <td>{{ recipe.user.first_name}} {{ recipe.user.last_name  }}</td>
+                            {% endif %}
+                        </tr>
                     {% endfor %}
                 </tbody>
             </table>

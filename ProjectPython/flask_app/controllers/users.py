@@ -129,7 +129,17 @@ def delete(id):
     print('deleted')
     return redirect('/recipes/delete/page')
 
+# renders the delete page
 @app.route('/recipes/delete/page')
 def delete_page():
-    return render_template('delete_page')
+    return render_template('delete_page.html')
+
+# renders the browse page
+@app.route('/recipes/browse')
+def browse():
+    if not 'id' in session:
+        return redirect('/')
+    user = User.get_one(session['id'])
+    recipes = Recipe.display_recipes()
+    return render_template("browse.html", user = user, recipes = recipes)
 

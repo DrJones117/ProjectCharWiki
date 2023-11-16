@@ -39,6 +39,24 @@
     background-size: cover;
 }
 
+.bg-image-delete {
+    background-image: url("https://th.bing.com/th/id/R.ef8b2ad40498aa24ca1467590710c507?rik=DMGXUO1Lh82g1w&riu=http%3a%2f%2fwww.pptbackgrounds.org%2fuploads%2fpaper-textures-crumpled-backgrounds-wallpapers.jpg&ehk=83wpc2IfUpb80bWJbBQsnIzRSlWnw5O7obyvoLEfFvk%3d&risl=&pid=ImgRaw&r=0");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.bg-image-browse {
+    background-image: url("https://th.bing.com/th/id/R.c1b0374ba8e595ec85a903bf3d9cecf5?rik=rUyTb8tozo58cA&riu=http%3a%2f%2fwww.architectureartdesigns.com%2fwp-content%2fuploads%2f2016%2f08%2f15-Inspirational-Rustic-Kitchen-Designs-You-Will-Adore-11.jpg&ehk=%2beW%2fMBQMUsSeKcAQOF8WniPCXsY7AB2unjrih%2bZK15M%3d&risl=&pid=ImgRaw&r=0");
+    height: auto;
+    width: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 p {
     word-wrap: break-word;
 }

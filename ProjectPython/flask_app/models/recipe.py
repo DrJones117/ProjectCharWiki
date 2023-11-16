@@ -58,8 +58,8 @@ class Recipe:
         if len(form['name']) < 2:
             flash("Please provide a recipe name.", "add_err")
             is_valid = False
-        if len(form['time']) == 0:
-            flash("Please give the time to make.", "add_err")
+        if len(form['time']) == 0 or len(form['time']) > 45:
+            flash("Please give a concise description of the time to make", "add_err")
             is_valid = False
         if len(form['category']) < 2:
             flash("Please provide a category for the dish.", "add_err")
