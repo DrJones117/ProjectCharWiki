@@ -5,25 +5,26 @@ from flask_app.models.user import User
 
 
 class Recipe:
-    def _init_(self, data):
+    def __init__(self, data):
         self.id = data['id']
         self.name = data['name']
         self.time = data['time']
+        self.category = data['category']
         self.ingredients = data['ingredients']
         self.instructions = data['instructions']
         self.user_id = data['user_id']
-        self.user_like_id['user_like_id']
 
 
-#     # Posts a recipe to the logged in user
-#     @classmethod
-#     def add_sasquatch(cls, form):
-#         query = """
-#         INSERT INTO sasquatches (location, date_sighted, number_of, notes, user_id)
-#         VALUES (%(location)s, %(date_sighted)s, %(number_of)s, %(notes)s, %(user_id)s);
-#         """
-#         return connectToMySQL(DATABASE).query_db(query, form)
+# Posts a recipe to the logged in user
+    @classmethod
+    def add_recipe(cls, form):
+        query = """
+        INSERT INTO recipes (name, time, category, ingredients, instructions, user_id)
+        VALUES (%(name)s, %(time)s, %(category)s, %(ingredients)s, %(instructions)s, %(user_id)s);
+        """
+        return connectToMySQL(DATABASE).query_db(query, form)
 
+# Gets all the recipes from the logged in user
     @classmethod
     def display_recipes(cls):
         query = """
@@ -48,71 +49,73 @@ class Recipe:
             return recipes
         return recipes
 
-#     # Gets one sasquatch by it's id with the data of the creator
-#     @classmethod
-#     def get_one(cls, data):
-#         query = """
-#         SELECT * FROM sasquatches
-#         JOIN users ON sasquatches.user_id = users.id
-#         WHERE sasquatches.id = %(id)s;
-#         """
-#         results = connectToMySQL(DATABASE).query_db(query, data)
-#         sasquatch_data = results[0]
-#         sasquatch = cls(sasquatch_data)
-            
-#         user_data = {
-#             'id': sasquatch_data['id'],
-#             'first_name': sasquatch_data['first_name'],
-#             'last_name': sasquatch_data['last_name'],
-#             'email': sasquatch_data['email'],
-#             'password': sasquatch_data['password'],
-#             'created_at': sasquatch_data['created_at'],
-#             'updated_at': sasquatch_data['updated_at']
-#         }
-#         sasquatch.user = User(user_data)
-#         return sasquatch
+# Validates the input when the user creates a recipe 
+    @classmethod
+    def validate_recipe(cls, form):
+        is_valid = True
+        if len(form['name']) < 2:
+            flash("Please provide a recipe name.", "add_err")
+            is_valid = False
+        if len(form['time']) == 0:
+            flash("Please give the time to make.", "add_err")
+            is_valid = False
+        if len(form['category']) < 2:
+            flash("Please provide a category for the dish.", "add_err")
+            is_valid = False
+        if len(form['ingredients']) < 5:
+            flash("Please give an ingredients list with measurements", "add_err")
+            is_valid = False
+        if len(form['instructions']) < 10:
+            flash("Please provide detailed instructions", "add_err")
+            is_valid = False
+        return is_valid
+
+# Gets one recipe by it's id with the data of the creator
+    @classmethod
+    def get_one(cls, data):
+        query = """
+        SELECT * FROM recipes
+        JOIN users ON recipes.user_id = users.id
+        WHERE recipes.id = %(id)s;
+        """
+        results = connectToMySQL(DATABASE).query_db(query, data)
+        recipe_data = results[0]
+        recipe = cls(recipe_data)
+        user_data = {
+            'id': recipe_data['id'],
+            'first_name': recipe_data['first_name'],
+            'last_name': recipe_data['last_name'],
+            'email': recipe_data['email'],
+            'password': recipe_data['password'],
+            'created_at': recipe_data['created_at'],
+            'updated_at': recipe_data['updated_at']
+        }
+        recipe.user = User(user_data)
+        return recipe
 
 
-# # Updates a sasquatch using a given id
-#     @classmethod
-#     def update(cls, data):
-#         query = """
-#         UPDATE sasquatches SET 
-#         location = %(location)s,
-#         date_sighted = %(date_sighted)s,
-#         number_of = %(number_of)s
-#         WHERE id = %(id)s;
-#         """
-#         results = connectToMySQL(DATABASE).query_db(query, data)
-#         return results
+# Updates a recipe using a given id
+    @classmethod
+    def update(cls, data):
+        query = """
+        UPDATE recipes SET 
+        name = %(name)s,
+        time = %(time)s,
+        category = %(category)s,
+        ingredients = %(ingredients)s,
+        instructions = %(instructions)s
+        WHERE id = %(id)s;
+        """
+        results = connectToMySQL(DATABASE).query_db(query, data)
+        return results
 
-# # Deletes a sasquatch
-#     @classmethod
-#     def delete(cls, data):
-#         query = """
-#         DELETE FROM sasquatches WHERE id = %(id)s
-#         """
-#         results = connectToMySQL(DATABASE).query_db(query, data)
-#         return results
+# Deletes a recipe
+    @classmethod
+    def delete(cls, data):
+        query = """
+        DELETE FROM recipes WHERE id = %(id)s
+        """
+        results = connectToMySQL(DATABASE).query_db(query, data)
+        return results
 
-
-#     @classmethod
-#     def validate_sasquatch(cls, form):
-#         is_valid = True
-#         if len(form['location']) < 2:
-#             flash("Please provide a name.", "add_err")
-#             is_valid = False
-#         if len(form['date_sighted']) == 0:
-#             flash("Please provide a date.", "add_err")
-#             is_valid = False
-#         if len(form['number_of']) < 1:
-#             flash("Please provide a number of sasquatches.", "add_err")
-#             is_valid = False
-#         if len(form['notes']) < 10:
-#             flash("Please provide a few notes on the sighting", "add_err")
-#             is_valid = False
-#         if len(form['notes']) > 50:
-#             flash("Notes are too long.", "add_err")
-#             is_valid = False
-#         return is_valid
 

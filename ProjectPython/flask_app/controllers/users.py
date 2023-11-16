@@ -57,9 +57,6 @@ def home_page():
 
 
 
-
-
-
 # ===== Recipe Routes ======
 
 @app.route('/dashboard')
@@ -70,6 +67,7 @@ def dashboard():
     recipes = Recipe.display_recipes()
     return render_template("dashboard.html", user = user, recipes = recipes)
 
+# Renders the create recipe page
 @app.route('/dashboard/add')
 def add_recipe():
     if not 'id' in session:
@@ -77,64 +75,57 @@ def add_recipe():
     user = User.get_one(session['id'])
     return render_template("create_recipe.html", user = user)
 
-# # Add sasquatch route
-# @app.route('/sasquatches')
-# def sasquatch():
-#     if not 'id' in session:
-#         return redirect('/')
-#     user = User.get_one(session['id'])
-#     return render_template("report_sasquatch.html", user = user)
+
+# Calls the add_recipe function and redirects to the home_page
+@app.route('/recipe/add', methods = ['POST'])
+def add_sasquatch():
+    if Recipe.validate_recipe(request.form):
+        recipe = Recipe.add_recipe(request.form)
+        return redirect("/dashboard")
+    else:
+        return redirect('/dashboard/add')
+
+# Redirects to the show recipe page
+@app.route('/recipes/<int:id>/show')
+def show_recipe(id):
+    data = {
+        "id": id
+    }
+    user = User.get_one(session['id'])
+    recipe = Recipe.get_one(data)
+    return render_template('show_recipe.html', recipe = recipe, user = user)
 
 
-# # Calls the add_sasquatch function and redirects to the home_page
-# @app.route('/sasquatches/add', methods = ['POST'])
-# def add_sasquatch():
-#     if Sasquatch.validate_sasquatch(request.form):
-#         sasquatch = Sasquatch.add_sasquatch(request.form)
-#         return redirect("/home_page")
-#     else:
-#         return redirect('/sasquatches')
-
-# # Renders the edit_sasquatch page
-# @app.route('/sasquatches/<int:id>/edit')
-# def render_edit(id):
-#     data = {
-#         "id": id
-#     }
-#     user = User.get_one(session['id'])
-#     sasquatch = Sasquatch.get_one(data)
-#     return render_template('edit_sasquatch.html', sasquatch = sasquatch, user = user)
+# Renders the edit_recipe page
+@app.route('/recipes/<int:id>/edit')
+def render_edit(id):
+    data = {
+        "id": id
+    }
+    user = User.get_one(session['id'])
+    recipe = Recipe.get_one(data)
+    return render_template('edit_recipe.html', recipe = recipe, user = user)
 
 # # Calls the update function
-# @app.route('/sasquatches/<int:id>/update', methods=['POST'])
-# def update(id):
-#     if Sasquatch.validate_sasquatch(request.form):
-#         data = {
-#             "id": id,
-#             **request.form
-#         }
-#         Sasquatch.update(data)
-#         return redirect(f'/sasquatches/{id}/show')
-#     else:
-#         return redirect(f'/sasquatches/{id}/edit')
+@app.route('/recipes/<int:id>/update', methods=['POST'])
+def update(id):
+    if Recipe.validate_recipe(request.form):
+        data = {
+            "id": id,
+            **request.form
+        }
+        Recipe.update(data)
+        return redirect(f'/recipes/{id}/show')
+    else:
+        return redirect(f'/recipes/{id}/edit')
 
-# # Calls the delete function
-# @app.route('/sasquatches/<int:id>/delete')
-# def delete(id):
-#     data = {
-#         "id": id
-#     }
-#     Sasquatch.delete(data)
-#     print('deleted')
-#     return redirect('/home_page')
-
-# # Redirects to the show recipe page
-# @app.route('/sasquatches/<int:id>/show')
-# def show_sasquatch(id):
-#     data = {
-#         "id": id
-#     }
-#     user = User.get_one(session['id'])
-#     sasquatch = Sasquatch.get_one(data)
-#     return render_template('show_sasquatch.html', sasquatch = sasquatch, user = user)
+# Calls the delete function
+@app.route('/recipes/<int:id>/delete')
+def delete(id):
+    data = {
+        "id": id
+    }
+    Recipe.delete(data)
+    print('deleted')
+    return redirect('/deletePage')
 

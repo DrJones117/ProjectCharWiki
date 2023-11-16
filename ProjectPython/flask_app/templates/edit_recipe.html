@@ -29,7 +29,7 @@
     <!-- Body -->
     <div class="d-flex justify-content-center">
         <div class="w-50 h-75 p-4 rounded bg-white">
-            <h1 class="text-center mb-3 ">Fill out the recipe card, {{ user.first_name }}</h1>
+            <h1 class="text-center mb-3 ">Edit your recipe, {{ user.first_name }}</h1>
             {% with messages = get_flashed_messages(category_filter=["add_err"]) %}
                 {% if messages %}
                     {% for message in messages %}
@@ -37,14 +37,14 @@
                     {% endfor %}
                 {% endif %}
             {% endwith %}
-            <form action="/recipe/add" method="POST">
-                <input name="name" type="text" class="form-control mt-2" placeholder="Name">
-                <input name="time" type="text" class="form-control mt-2" placeholder="time to make">
-                <input name="category" type="text" class="form-control mt-2" placeholder="The type of food. Soup, cookie, pastry, etc">
-                <textarea name="ingredients" type="text" class="form-control mt-2" placeholder="ingredients list. Give measurement type and amount as well. "></textarea>
-                <textarea name="instructions" type="text" class="form-control mt-2 text-wrap" placeholder="Give detailed instructions"></textarea>
+            <form action="/recipes/{{ recipe.id }}/update" method="POST">
+                <input name="name" type="text" class="form-control mt-2" value="{{ recipe.name }}">
+                <input name="time" type="text" class="form-control mt-2" value="{{ recipe.time }}">
+                <input name="category" type="text" class="form-control mt-2" value="{{ recipe.category}}">
+                <textarea name="ingredients" type="text" class="form-control mt-2">{{ recipe.ingredients }}</textarea>
+                <textarea name="instructions" type="text" class="form-control mt-2">{{ recipe.instructions}}</textarea>
                 <input value="{{ user.id }}" name="user_id" type="hidden" class="form-control mt-2">
-                <button class="btn btn-primary mt-2" type="submit">Create Recipe</button>
+                <button class="btn btn-primary mt-2" type="submit">Update Recipe</button>
             </form>
         </div>
     </div>
