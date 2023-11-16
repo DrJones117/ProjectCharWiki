@@ -35,7 +35,7 @@
                     <p>Posted By: {{ recipe.user.first_name }} {{ recipe.user.last_name }}</p>
                     <div class="h-100">
                         <a href="/recipes/{{ recipe.id }}/edit" class="btn btn-light btn-sm h-25">Edit</a>
-                        <a class="btn btn-danger btn-sm h-25">Delete</a>
+                        <a href="/recipes/{{ recipe.id }}/delete" class="btn btn-danger btn-sm h-25">Delete</a>
                     </div>
                 </div>
 

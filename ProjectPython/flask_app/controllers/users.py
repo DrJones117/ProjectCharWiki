@@ -127,5 +127,9 @@ def delete(id):
     }
     Recipe.delete(data)
     print('deleted')
-    return redirect('/deletePage')
+    return redirect('/recipes/delete/page')
+
+@app.route('/recipes/delete/page')
+def delete_page():
+    return render_template('delete_page')
 
