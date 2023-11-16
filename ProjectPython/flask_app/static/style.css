@@ -4,7 +4,7 @@
     background-image: url("https://images.creativemarket.com/0.1.0/ps/1656196/1360/906/m1/fpnw/wm1/ees6hqqmdfyfpd2mm0hkqwvhrffoozof6ptm7b4ncvatl3vzwwsercpqc3jnoa3c-.jpg?1473853235&s=740980438cd956b3c2024cff83dddf5d");
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -12,7 +12,7 @@
     background-image: url("https://images4.alphacoders.com/108/thumb-1920-1082885.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -20,7 +20,7 @@
     background-image: url("https://img0.etsystatic.com/005/0/6438263/il_fullxfull.406367924_kidr.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
 }
 
@@ -28,14 +28,14 @@
     background-image: url("https://th.bing.com/th/id/R.aa4866bc2e9e0e119f2df09540cd2fec?rik=1MNmm7KvRUEENg&riu=http%3a%2f%2fcallmevictorian.com%2fwp-content%2fuploads%2f2012%2f04%2frecipe-card-template-1024x682.jpg&ehk=sAxRrZnv7oanSfZJ6iCCxLPudEi6qRDU9oP1q1uTaBU%3d&risl=&pid=ImgRaw&r=0");
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
 }
 .bg-image-create {
     background-image: url("https://c.stocksy.com/a/ukB000/z9/45192.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
 }
 
